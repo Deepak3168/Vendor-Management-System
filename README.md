@@ -167,7 +167,7 @@ Got it, let's provide a more detailed description for each endpoint:
 
 **11. Acknowledge Purchase Order**
 
-- **PUT:** http://127.0.0.1/api/vendors/1/purchase_orders/1/acknowledge/
+- **PUT:** http://127.0.0.1/api/purchase_orders/1/acknowledge/
   - **Description:** Acknowledge a specific purchase order for a specific vendor.
 
 **12. Get Vendor Performance Metrics**
