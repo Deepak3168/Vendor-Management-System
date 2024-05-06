@@ -87,7 +87,7 @@ Got it, let's provide a more detailed description for each endpoint:
 
 - **POST:** https://127.0.0.1/api/logout/
   - **Description:** Logout from the system.
-  - **Request Body:** JSON containing the access token.
+  - **Request Body:** JSON containing the refresh token.
   - **Response:** Successful logout.
 
 ### Vendor
