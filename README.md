@@ -4,7 +4,12 @@ The Vendor Management System (VMS) API provides functionalities for managing ven
 
 
 -[Installation](#installation)
+
+-[Testing](#testing)
+
 -[API Endpoints](#apiendpoints)
+
+
 
 ## Installation
 
@@ -31,6 +36,23 @@ To run the API on your local machine, follow these steps:
    ```
 
 Now, the API should be up and running locally on your machine. You can access it using the provided endpoints.
+
+## Testing
+
+To test user authentication, run the following command:
+
+```bash
+python manage.py test users
+```
+
+To test the API endpoints and functionality, execute the following command:
+
+```bash
+python manage.py test vendor
+```
+
+This will run the test suite for the Vendor Management System API and ensure that all endpoints and functionalities are working as expected.
+
 
 ## API Endpoints
 
@@ -152,4 +174,5 @@ Got it, let's provide a more detailed description for each endpoint:
 
 - **GET:** http://127.0.0.1/api/vendors/1/performance/
   - **Description:** Get performance metrics for a specific vendor.
+
 
