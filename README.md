@@ -176,3 +176,10 @@ Got it, let's provide a more detailed description for each endpoint:
   - **Description:** Get performance metrics for a specific vendor.
 
 
+
+To explore the API endpoints further and understand their usage in detail, refer to the API documentation:
+
+- Swagger UI: [http://127.0.0.1/api/swagger](http://127.0.0.1/api/swagger)
+- ReDoc: [http://127.0.0.1/api/redoc](http://127.0.0.1/api/redoc)
+
+These documentation links provide comprehensive information about the available endpoints, request parameters, and response formats.
