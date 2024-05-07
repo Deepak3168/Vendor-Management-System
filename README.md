@@ -9,7 +9,7 @@ The Vendor Management System (VMS) API provides functionalities for managing ven
 
 -[API Endpoints](#apiendpoints)
 
--[API Documentation](#apidocumentation)
+-[API Documentation](#api-documentation)
 
 
 
