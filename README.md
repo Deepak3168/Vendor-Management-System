@@ -56,12 +56,6 @@ This will run the test suite for the Vendor Management System API and ensure tha
 
 ## API Endpoints
 
-Got it, let's provide a more detailed description for each endpoint:
-
----
-
-## API Endpoints
-
 ### Authentication
 
 **1. Register User**
