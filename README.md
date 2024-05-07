@@ -9,6 +9,8 @@ The Vendor Management System (VMS) API provides functionalities for managing ven
 
 -[API Endpoints](#apiendpoints)
 
+-[API Documentation](#apidocumentation)
+
 
 
 ## Installation
@@ -169,11 +171,18 @@ This will run the test suite for the Vendor Management System API and ensure tha
 - **GET:** http://127.0.0.1/api/vendors/1/performance/
   - **Description:** Get performance metrics for a specific vendor.
 
+## API Documentation
 
+Explore the API endpoints further and understand their usage in detail:
 
-To explore the API endpoints further and understand their usage in detail, refer to the API documentation:
+- **Swagger UI (Local)**: [http://127.0.0.1/api/swagger](http://127.0.0.1/api/swagger)
+- **ReDoc (Local)**: [http://127.0.0.1/api/redoc](http://127.0.0.1/api/redoc)
 
-- Swagger UI: [http://127.0.0.1/api/swagger](http://127.0.0.1/api/swagger)
-- ReDoc: [http://127.0.0.1/api/redoc](http://127.0.0.1/api/redoc)
+You can also access the API documentation for the deployed version on Render:
+
+- **Swagger UI (Render)**: [https://vendor-management-system-dwtp.onrender.com/api/swagger/](https://vendor-management-system-dwtp.onrender.com/api/swagger/)
+- **ReDoc (Render)**: [https://vendor-management-system-dwtp.onrender.com/api/redoc/](https://vendor-management-system-dwtp.onrender.com/api/redoc/)
 
 These documentation links provide comprehensive information about the available endpoints, request parameters, and response formats.
+
+
