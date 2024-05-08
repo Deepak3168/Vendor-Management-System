@@ -5,17 +5,20 @@ from .models import Vendor,PurchaseOrder,HistoricalPerformance
 from .serializers import VendorSerializer,PurchaseOrderSerializer,HistoricalPerformanceSerializer,AcknowledgeSerializer
 from rest_framework.permissions import IsAuthenticated
 from drf_yasg.utils import swagger_auto_schema
+from rest_framework_simplejwt.authentication import JWTAuthentication
 
 # Create your views here.
 @swagger_auto_schema(operation_id='GET Vendors List  or POST Vendor')
 class VendorList(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated]
+    authentication_classes = (JWTAuthentication, )
     queryset = Vendor.objects.all()
     serializer_class = VendorSerializer
 
 @swagger_auto_schema(operation_id='GET/PUT/DELETE specific vendor with id')
 class VendorDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
+    authentication_classes = (JWTAuthentication, )
     queryset = Vendor.objects.all()
     serializer_class = VendorSerializer
 
@@ -23,11 +26,13 @@ class VendorDetail(generics.RetrieveUpdateDestroyAPIView):
 @swagger_auto_schema(operation_id='GET Purchase orders List  or POST Purchase Order')
 class  PurchaseOrderList(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated]
+    authentication_classes = (JWTAuthentication, )
     queryset = PurchaseOrder.objects.all()
     serializer_class = PurchaseOrderSerializer
 @swagger_auto_schema(operation_id='GET/PUT/DELETE specific  purchase order')
 class PurchaseOrderDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated]
+    authentication_classes = (JWTAuthentication, )
     queryset = PurchaseOrder.objects.all()
     serializer_class = PurchaseOrderSerializer
 
@@ -39,6 +44,7 @@ class PurchaseOrderDetail(generics.RetrieveUpdateDestroyAPIView):
         return Response(serializer.data)
 @swagger_auto_schema(operation_id='GET vendor Performance metrics')
 class VendorPerformance(generics.RetrieveAPIView):
+    authentication_classes = (JWTAuthentication, )
     permission_classes = [IsAuthenticated]
     serializer_class = HistoricalPerformanceSerializer
     lookup_field = 'vendor'
@@ -48,6 +54,7 @@ class VendorPerformance(generics.RetrieveAPIView):
         return HistoricalPerformance.objects.filter(id=latest_metrics.id)
 @swagger_auto_schema(operation_id='GET Vendor performance History over Time')
 class VendorPerformanceHistory(generics.ListAPIView):
+    authentication_classes = (JWTAuthentication, )
     queryset = HistoricalPerformance.objects.all()
     permission_classes = [IsAuthenticated]
     serializer_class = HistoricalPerformanceSerializer
@@ -55,6 +62,7 @@ class VendorPerformanceHistory(generics.ListAPIView):
 
 @swagger_auto_schema(operation_id='PUT purchase order Acknowledgement date ')
 class PurchaseOrderAcknowledge(generics.UpdateAPIView):
+    authentication_classes = (JWTAuthentication, )
     permission_classes = [IsAuthenticated]
     queryset = PurchaseOrder.objects.all()
     serializer_class = AcknowledgeSerializer
