@@ -9,6 +9,7 @@ from rest_framework.permissions import IsAuthenticated
 
 
 # view for registering users
+@swagger_auto_schema(request_body=UserSerializer)
 class RegisterView(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
@@ -16,7 +17,7 @@ class RegisterView(APIView):
         serializer.save()
         return Response(serializer.data)
 
-
+@swagger_auto_schema(request_body=UserSerializer)
 class LogoutView(APIView):
     permission_classes = (IsAuthenticated,)
 
