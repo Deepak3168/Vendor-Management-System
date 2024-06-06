@@ -19,6 +19,9 @@ To run the API on your local machine, follow these steps:
    ```bash
    git clone https://github.com/Deepak3168/Vendor-Management-System.git
    ```
+   ```bash
+   cd Vendor-Management-System
+   ```
 
 2. **Install dependencies:**
    ```bash
